@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+
+  background: #0e0e10;
+  position: relative;
+}
+
+.container {
+  width: auto;
+  margin-left: -160%;
+  margin-top: 10%;
+}
+
+
+
+@-webkit-keyframes topAnimation {
+  from {
+    transform: translate(0rem, 0);
+  }
+  to {
+    transform: translate(0rem, 3.5rem);
+  }
+}
+
+@keyframes topAnimation {
+  from {
+    transform: translate(0rem, 0);
+  }
+  to {
+    transform: translate(0rem, 3.5rem);
+  }
+}
+@-webkit-keyframes bottomAnimation {
+  from {
+    transform: translate(-11.5rem, 0);
+  }
+  to {
+    transform: translate(0rem, 0);
+  }
+}
+@keyframes bottomAnimation {
+  from {
+    transform: translate(-11.5rem, 0);
+  }
+  to {
+    transform: translate(0rem, 0);
+  }
+}
+button.btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  border: 0;
+  position: relative;
+  letter-spacing: 0.15em;
+  margin: 0 auto;
+  padding: 1rem 2.5rem;
+  background: transparent;
+  outline: none;
+  font-size: 28px;
+  color: white;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.15s;
+}
+button.btn::after, button.btn::before {
+  border: 0;
+  content: "";
+  position: absolute;
+  height: 40%;
+  width: 10%;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: -2;
+  border-radius: 50%;
+}
+button.btn::before {
+  border: 0;
+  background-color: #c92918;
+  top: -0.75rem;
+  left: 0.5rem;
+  -webkit-animation: topAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s infinite alternate;
+          animation: topAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s infinite alternate;
+}
+button.btn::after {
+  background-color: #e74c3c;
+  top: 3rem;
+  left: 13rem;
+  -webkit-animation: bottomAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s infinite alternate;
+          animation: bottomAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s infinite alternate;
+}
+button.btn:hover {
+  color: green;
+}
+button.btn:hover::before, button.btn:hover::after {
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+  -webkit-animation: none;
+          animation: none;
+}
+button.btn:hover::after {
+  left: 0rem;
+}
+button.btn:hover::before {
+  top: 0.5rem;
+  left: 0.35rem;
+}
+
+
+
+
+.stocks h1 {
+  color: white;
+  font-size: 4rem;
+  margin-left: 2rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.news {
+   float: right;
+/* border-left: 6px solid white;
+   padding-left: 30px; */
+   margin-top: -14%;
+   
+
+}
+
+.news h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    margin-top: -6rem;
+    font-size: 40px;
+
+}
+
+blink {
+    -webkit-animation: 2s linear infinite condemned_blink_effect; /* for Safari 4.0 - 8.0 */
+    animation: 2s linear infinite condemned_blink_effect;
+  }
+  
+  /* for Safari 4.0 - 8.0 */
+  @-webkit-keyframes condemned_blink_effect {
+    0% {
+      visibility: hidden;
+    }
+    50% {
+      visibility: hidden;
+    }
+    100% {
+      visibility: visible;
+    }
+  }
+  
+  @keyframes condemned_blink_effect {
+    0% {
+      visibility: hidden;
+    }
+    50% {
+      visibility: hidden;
+    }
+    100% {
+      visibility: visible;
+    }
+  }
+
+
+::selection{
+  color: #fff;
+  background: #262421
+
+}
+.wrapper{
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px;
+ 
+  max-width: 380px;
+  width: 100%;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+  margin-left: 3rem;
+
+}
+.wrapper header{
+  font-size: 22px;
+  font-weight: 600;
+}
+.wrapper .poll-area{
+  margin: 20px 0 15px 0;
+}
+.poll-area label{
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 8px 15px;
+  border: 2px solid #e6e6e6;
+  transition: all 0.2s ease;
+}
+.poll-area label:hover{
+  border-color: #ddd;
+}
+label.selected{
+  border-color: Light Gray - #343a3f
+
+}
+label .row{
+  display: flex;
+  pointer-events: none;
+  justify-content: space-between;
+}
+label .row .column{
+  display: flex;
+  align-items: center;
+}
+label .row .circle{
+  height: 19px;
+  width: 19px;
+  display: block;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: relative;
+}
+label.selected .row .circle{
+  border-color: Light Gray - #343a3f
+
+}
+label .row .circle::after{
+  content: "";
+  height: 11px;
+  width: 11px;
+  background: Light Gray - #343a3f;
+
+  border-radius: inherit;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  display: none;
+}
+.poll-area label:hover .row .circle::after{
+  display: block;
+  background: #e6e6e6;
+}
+label.selected .row .circle::after{
+  display: block;
+  background: Light Gray - #343a3f
+
+}
+label .row span{
+  font-size: 16px;
+  font-weight: 500;
+}
+label .row .percent{
+  display: none;
+}
+label .progress{
+  height: 7px;
+  width: 100%;
+  position: relative;
+  background: #f0f0f0;
+  margin: 8px 0 3px 0;
+  border-radius: 30px;
+  display: none;
+  pointer-events: none;
+}
+label .progress:after{
+  position: absolute;
+  content: "";
+  height: 100%;
+  background: #ccc;
+  width: calc(1% * var(--w));
+  border-radius: inherit;
+  transition: all 0.2s ease;
+}
+label.selected .progress::after{
+  background: Light Gray - #343a3f
+
+}
+label.selectall .progress,
+label.selectall .row .percent{
+  display: block;
+}
+input[type="radio"],
+input[type="checkbox"]{
+  display: none;
+}
+
+.news-section-1 {
+    margin-left: 4rem;
+}
+
+.img1 {
+    margin-top: 2rem;
+    margin-right: 1rem;
+    background-image: url(news-img-1.jpg);
+    height: 20rem;
+    
+    
+}
+
+
+
+.img1 p {
+    color: white;
+    font: bold;
+    position: relative;
+    top: 70%;
+    font-size: 155%;
+   
+}
+
+.img2 {
+  margin-top: 2rem;
+}
+
+.img2 p {
+  color: white;
+  margin-top: 1rem;
+  font-size: 150%;
+  margin-top: -7rem;
+  font: bold;
+}
+
+.img2 img {
+  width: 100%;
+  height: 15rem;
+}
+
+.daily-bigs {
+  display: flex;
+  margin-top: 1%;
+  margin-left: 2%;
+
+}
+
+.sp-500 {
+  border-right: 3px solid white;
+  padding-right: 5px;
+  margin-right: 20px;
+}
+
+.sp-500 h1 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 0.5rem;
+}
+
+.sp-500 h3 {
+  color: #343a3f;
+}
+
+.sp-500 h5 {
+  color: red;
+}
+
+.sp-500 img {
+  margin-left: 7rem;
+  height: 4rem;
+  width: 5rem;
+  margin-top: -5rem;
+}
+
+.green {
+  color: green
+}
+
+.balloon {
+  margin-left: 2%;
+  margin-top: 1%;
+}
+
+.balloon h1 {
+  margin-top: 0.2%;
+  color: white;
+  position: absolute;
+
+}
+
+.highlight1  {
+  width: 200px;
+  height: 15%;
+  background-image: url(cruise.jpg);
+  background-repeat: no-repeat;
+  margin-left: 42.5rem;
+  margin-top: -15.5%;
+  position: absolute;
+}
+
+.highlight1 h1 {
+  color: white;
+  font-size: 20px;
+  position: relative;
+  top: 100%;
+}
+
+.highlight2 {
+  height: 150px;
+  width: 200px;
+  margin-left: 42.5rem;
+  background-image: url(paypal.jpg);
+  position: absolute;
+  margin-left: 42.5rem;
+  margin-top: -6%;
+
+}
+
+.highlight2 h1 {
+  color: blue;
+  font-size: 20px;
+  position: relative;
+  top: 100%;
+  color: white;
+
+}
+
+.countdown * {
+  font-family: Impact, sans-serif;
+  box-sizing: border-box;
+  text-align: center;
+}
+.countdown {
+  display: flex;
+  margin: 0 auto;
+  max-width: 450px;
+  background: #000;
+  margin-top: 0.1%;
+  margin-left: 12%;
+}
+
+/* (B) DAY/HR/MIN/SEC CELLS */
+.countdown .cell {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 10px;
+}
+.countdown .digits {
+  font-size: 24px;
+  color: #000;
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+.countdown .text {
+  margin-top: 10px;
+  color: #ddd;
+}
+
+/* (C) IF YOU WANT TO SPECIFICALLY STYLE THE DAY/HR/MIN/SEC
+.countdown .days { }
+.countdown .hours { }
+.countdown .minutes { }
+.countdown .seconds { }
+*/
+
+/* (X) DOES NOT MATTER */
+
+h1, #code-boxx * {
+  font-family: arial, sans-serif;
+  color: #fff;
+}
+h1, #code-boxx {
+  width: 100%;
+
+}
+#code-boxx a {
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 0.8em;
+  background: #b90a0a;
+}
+
+.countdow {
+  margin-top:  5%;
+}
+
+.countdow h1 {
+  margin-left: 15%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 3rem;
+  background-image: linear-gradient(to right, #ff0808,#1915e9);
+  color: transparent;
+  -webkit-background-clip: text;
+}
