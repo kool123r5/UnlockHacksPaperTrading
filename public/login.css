@@ -1,0 +1,103 @@
+body {
+    background-color: black;
+}
+
+#signInWithGoogleButton {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#signInWithGoogleButton {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #DB4437;
+}
+
+#signInWithGoogleButton:hover {
+    background-color: #DB4437;
+    color: white;
+}
+
+#signInWithGithubButton {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#signInWithGithubButton {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #6cc644;
+}
+#signInWithGithubButton:hover {
+    background-color: #6cc644;
+    color: white;
+}
+
+#signInWithTwitterButton {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#signInWithTwitterButton {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #1DA1F2;
+}
+#signInWithTwitterButton:hover {
+    background-color: #1DA1F2;
+    color: white;
+}
+
+#logins {
+    margin-left: 30%;
+    margin-top: 20%;
+    align-items: center;
+}
+
+#googleIcon{
+    color: #DB4437;
+}
+
+#signInWithGoogleButton:hover #googleIcon {
+    color: white;
+}
+
+#githubIcon{
+    color: #6cc644;
+}
+
+#signInWithGithubButton:hover #githubIcon {
+    color: white;
+}
+
+#twitterIcon{
+    color: #1DA1F2;
+}
+
+#signInWithTwitterButton:hover #twitterIcon {
+    color: white;
+}

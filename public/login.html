@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js"></script>
+    
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyArAlMYXKKUNjKZX-wNnf3iFqUUdQ40K44",
+        authDomain: "unlockhacks-hackathon.firebaseapp.com",
+        projectId: "unlockhacks-hackathon",
+        storageBucket: "unlockhacks-hackathon.appspot.com",
+        messagingSenderId: "422341419959",
+        appId: "1:422341419959:web:b20d911e226c6e147afe32"
+    };
+    
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+    <link
+    href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+    rel="stylesheet"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous"
+    />
+</head>
+<body>
+    <div class="logins" id="logins">
+        <button id="signInWithGoogleButton"><i id="googleIcon" class="fab fa-google"></i> Sign in with Google</button>
+        <button id="signInWithGithubButton"><i id="githubIcon" class="fab fa-github"></i> Sign in with GitHub</button>
+        <button id="signInWithTwitterButton"><i id="twitterIcon" class="fab fa-twitter"></i> Sign in with Twitter</button>
+    </div>
+</body>
+<script src="login.js" defer></script>
+</html>

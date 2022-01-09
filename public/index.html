@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading For All</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js"></script>
+    
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyArAlMYXKKUNjKZX-wNnf3iFqUUdQ40K44",
+        authDomain: "unlockhacks-hackathon.firebaseapp.com",
+        projectId: "unlockhacks-hackathon",
+        storageBucket: "unlockhacks-hackathon.appspot.com",
+        messagingSenderId: "422341419959",
+        appId: "1:422341419959:web:b20d911e226c6e147afe32"
+    };
+    
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+</head>
+<body>
+
+  
+  
+  <h1 id="portfolio">Portfolio</h1>
+  <div id="chartDiv">
+    <canvas id="myChart" width="500" height="500"></canvas>
+  </div>
+  <div id="sidebar">
+  </div>
+  <h1 id="cashH1">Cash: </h1>
+  <div id="buyingStockDiv">
+    <h1 id="buystocks">Buy a Stock</h1>
+    <form id="buyingForm">
+      <input type="text" placeholder="Enter Stock Ticker" id="inputtedStock"/>
+      <input type="number" placeholder="Number Of Shares" id="numberOfShares"/>
+      <input type="submit" value="Buy" id = "buy">
+    </form>
+  </div>
+  <div id="sellingStockDiv">
+    <h1 id="sellstocks">Sell a Stock</h1>
+    <form id="sellingForm">
+      <input type="text" placeholder="Enter Stock Ticker" id="inputtedSellStock"/>
+      <input type="number" placeholder="Number Of Shares" id="numberOfSoldShares"/>
+      <input type="submit" value="Sell" id = "sell">
+    </form>
+  </div>
+  <div id="error"></div>
+</body>
+<script src="script.js" defer></script>
+</html>
